@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#91B63E</color>
+    <color name="colorPrimaryDark">#91B63E</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="welcomefacebook">#2b3696</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorGray">#EAEAEA</color>
+    <color name="colortext">#c4c0c0</color>
+    <color name="colorgreen">#91B63E</color>
+    <color name="black_clr">#3f3f3f</color>
+    <color name="colorblack">#3f3f3f</color>
+    <color name="colorMain">#444444</color>
+</resources>

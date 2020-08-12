@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBackForgetId"
+                    style="@style/toolbarArrowStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_20sdp" />
+
+                <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="Forgot Password"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_13sdp">
+                    </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:background="@drawable/ic_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp">
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/playlist_script"
+                    android:textFontWeight="600"
+                    android:text="Forgot Password"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13sdp"/>
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:weightSum="2"
+                    android:background="@drawable/rounded_box_signup"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_weight="1.82"
+                        android:id="@+id/tv_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Email Address"
+                        android:inputType="textEmailAddress"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="@dimen/_13sdp" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivUserImageId"
+                        android:layout_weight=".15"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:background="@drawable/ic_email"/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textFontWeight="600"
+                    android:text="Password Will Send To Your Email Address \n  Kindly Check And Login Again"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_13sdp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_send"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:background="@drawable/button_shape"
+                    android:text="Send"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_12sdp" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

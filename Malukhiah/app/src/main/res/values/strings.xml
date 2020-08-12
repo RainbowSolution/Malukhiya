@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Malukhiah</string>
+    <string name="welcome_back">Welcome Back!!</string>
+    <string name="continue_with_facebook">Continue With Facebook</string>
+    <string name="continue_with_Email">Continue With Email</string>
+    <string name="login_with_social_accounts">Login With Social Accounts</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="myprofile">My Profile</string>
+    <string name="membership">Membership</string>
+    <string name="invitefrind">Invite Friends</string>
+    <string name="shareMyProfile">Share My Profile</string>
+    <string name="abouttheapp">About The App</string>
+    <string name="privacypolicy">Privacy Policy</string>
+    <string name="termofuse">Term of Use</string>
+    <string name="contactus">Contact Us</string>
+    <string name="logout">Logout</string>
+
+</resources>

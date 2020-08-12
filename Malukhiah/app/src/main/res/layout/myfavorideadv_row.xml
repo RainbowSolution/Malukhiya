@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_8sdp"
+    android:layout_marginRight="@dimen/_8sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/llOrderClickId"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight=".35"
+                android:layout_width="0dp"
+                android:gravity="top"
+                android:layout_gravity="top"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_product"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ImageView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".65"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:id="@+id/id_username"
+                        android:textSize="@dimen/_13sdp"
+                        android:text="Egg Friedrice"
+                        android:layout_weight="0.78"
+                        android:textColor="@color/colorblack"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/iv_add_address"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_weight="0.22"
+                        android:src="@drawable/ic_icon_fill_heart" />
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="South Indian"
+                    android:textColor="@color/colorMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="Refrence site about Lorem Lpsum giving information origins,"
+                    android:textColor="@color/colorMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 6.700"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+

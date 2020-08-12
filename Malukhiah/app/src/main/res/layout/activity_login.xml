@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBackForgetId"
+                style="@style/toolbarArrowStyle"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_20sdp" />
+
+
+            <TextView
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:fontFamily="@font/playlist_script"
+                    android:text="Sell &amp; Buy Home made Food \n and Services"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_20sdp">
+
+                </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_50sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:weightSum="2"
+                    android:background="@drawable/rounded_box_signup"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                       android:layout_weight="1.85"
+                        android:id="@+id/tv_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Email Address"
+                        android:inputType="textEmailAddress"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivUserImageId"
+                        android:layout_weight=".10"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:background="@drawable/ic_email"/>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:weightSum="2"
+                android:background="@drawable/rounded_box_signup"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_weight="1.85"
+                    android:id="@+id/tv_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="text"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="@dimen/_13sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_weight=".10"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:background="@drawable/ic_key_variant"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvForgetPasswordId"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Forgot Password?"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/button_shape"
+                android:text="Login Here"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_100sdp"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textSize="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:id="@+id/tv_new_user"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New user?">
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRegisteredNowId"
+                    android:textSize="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/sf_pro_display_semibold"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create An Account">
+                </androidx.appcompat.widget.AppCompatTextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

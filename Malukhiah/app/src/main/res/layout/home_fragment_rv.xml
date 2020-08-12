@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite">
+
+ <androidx.core.widget.NestedScrollView
+     android:fitsSystemWindows="true"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+   <LinearLayout
+       android:paddingBottom="@dimen/_15sdp"
+       android:paddingTop="@dimen/_5sdp"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <TextView
+         android:layout_weight="0.7"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:gravity="left"
+         android:fontFamily="@font/sf_pro_display_regular"
+         android:text="Today's Highlight"
+         android:textColor="@color/black_clr"
+         android:textSize="@dimen/_14sdp"/>
+
+     <TextView
+         android:id="@+id/tvWeekendViewAllId"
+         android:layout_weight="0.3"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:gravity="right"
+         android:layout_gravity="right"
+         android:text="View All"
+         android:textColor="@color/colorGray"
+         android:textSize="@dimen/_11sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rv_banner"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:nestedScrollingEnabled="false" />
+
+     <androidx.viewpager.widget.ViewPager
+         android:visibility="gone"
+         android:id="@+id/vpHomeBannerId"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/_160sdp" />
+
+     <com.google.android.material.tabs.TabLayout
+         android:visibility="gone"
+         android:layout_gravity="bottom"
+         android:id="@+id/tlHomeBannerId"
+         android:layout_width="wrap_content"
+         android:layout_height="@dimen/_20sdp"
+         app:tabGravity="start"
+         app:tabPaddingEnd="5dp"
+         app:tabPaddingStart="5dp"
+         app:tabIndicatorHeight="0dp"
+         app:tabTextColor="@android:color/transparent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <TextView
+         android:paddingEnd="@dimen/_15sdp"
+         android:paddingStart="@dimen/_15sdp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="left"
+         android:fontFamily="@font/sf_pro_display_regular"
+         android:text="Explore From Categories"
+         android:textColor="@color/black_clr"
+         android:textSize="@dimen/_14sdp"/>
+
+     <androidx.recyclerview.widget.RecyclerView
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/id_rv_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+   </LinearLayout>
+
+   </LinearLayout>
+  </LinearLayout>
+ </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+
