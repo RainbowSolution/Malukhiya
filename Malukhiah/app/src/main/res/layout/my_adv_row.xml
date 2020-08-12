@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    android:background="@color/colorWhite"
+
+<androidx.cardview.widget.CardView
+    app:cardBackgroundColor="@color/colorWhite"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/_20sdp"
-    android:layout_marginBottom="@dimen/_10sdp"
-    android:layout_marginLeft="@dimen/_8sdp"
-    android:layout_marginRight="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_marginLeft="@dimen/_1sdp"
+    android:layout_marginRight="@dimen/_1sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <LinearLayout
+        android:padding="@dimen/_10sdp"
         android:id="@+id/llOrderClickId"
-        android:padding="@dimen/_8sdp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -26,27 +29,31 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_weight=".35"
+                android:layout_weight=".30"
                 android:layout_width="0dp"
                 android:gravity="top"
                 android:layout_gravity="top"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
 
-                <ImageView
+
+                <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/iv_product"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_background"
+                    app:riv_corner_radius="@dimen/_10sdp"
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="clamp"
+                    android:scaleType="centerCrop"
+                    app:riv_oval="false"
+                    android:src="@drawable/dish_img"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </ImageView>
+                    android:layout_height="@dimen/_75sdp" />
 
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_weight=".65"
+                android:layout_weight=".70"
                 android:layout_width="0dp"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
@@ -59,40 +66,40 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:fontFamily="@font/sf_pro_display_bold"
-                        android:id="@+id/id_username"
+                        android:id="@+id/tv_productname"
                         android:textSize="@dimen/_13sdp"
                         android:text="Egg Friedrice"
-                        android:layout_weight="0.78"
+                        android:layout_weight="0.90"
                         android:textColor="@color/colorblack"
                         android:layout_width="0sp"
                         android:layout_height="wrap_content">
                     </TextView>
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
-                        android:id="@+id/iv_add_address"
+                        android:id="@+id/iv_menu"
                         android:layout_height="@dimen/_15sdp"
-                        android:layout_weight="0.22"
+                        android:layout_weight="0.10"
                         android:src="@drawable/ic_menu_verticle" />
 
                 </LinearLayout>
 
-
-
-
                 <TextView
+                    android:layout_marginTop="@dimen/_2sdp"
                     android:fontFamily="@font/sf_pro_display_regular"
                     android:textSize="@dimen/_11sdp"
+                    android:id="@+id/tv_categoryid"
                     android:text="South Indian"
-                    android:textColor="@color/colorMain"
+                    android:textColor="@color/black_clr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </TextView>
                 <TextView
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:fontFamily="@font/sf_pro_display_regular"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:textSize="@dimen/_9sdp"
+                    android:id="@+id/tv_description_Id"
                     android:text="Refrence site about Lorem Lpsum giving information origins,"
-                    android:textColor="@color/colorMain"
+                    android:textColor="@color/black_clr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </TextView>
@@ -107,7 +114,7 @@
                         android:id="@+id/tv_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$ 6.700"
+                        android:text="$ 60"
                         android:fontFamily="@font/sf_pro_display_bold"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_10sdp" />
@@ -120,8 +127,8 @@
                         android:gravity="right"
                         android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_gravity="right"
-                        android:fontFamily="@font/sf_pro_display_bold"
-                        android:textColor="@color/colorMain"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textColor="@color/black_clr"
                         android:textSize="@dimen/_10sdp" />
 
                 </LinearLayout>
@@ -135,6 +142,5 @@
 
 
 
-
-</RelativeLayout>
+</androidx.cardview.widget.CardView>
 

@@ -8,44 +8,47 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <ScrollView
         android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:paddingBottom="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-                <TextView
-                    android:paddingLeft="@dimen/_15sdp"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:paddingRight="@dimen/_15sdp"
-                    android:layout_marginTop="@dimen/_50sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:fontFamily="@font/playlist_script"
-                    android:textFontWeight="600"
                     android:text="Post Your Ads"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/_20sdp">
-                </TextView>
-
-
-
+                </androidx.appcompat.widget.AppCompatTextView>
 
             <LinearLayout
                 android:paddingBottom="@dimen/_20sdp"
-                android:paddingLeft="@dimen/_15sdp"
-                android:paddingRight="@dimen/_15sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                  <androidx.cardview.widget.CardView
                      android:layout_marginTop="@dimen/_15sdp"
+                     android:layout_marginLeft="@dimen/_15sdp"
+                     android:layout_marginRight="@dimen/_15sdp"
                      android:layout_width="match_parent"
                      android:background="@color/colorWhite"
                      app:cardBackgroundColor="@color/colorWhite"
@@ -66,14 +69,14 @@
                              android:hint="Title"
                              android:inputType="text"
                              android:layout_gravity="center"
-                             android:layout_marginStart="@dimen/_10sdp"
+                             android:layout_marginStart="@dimen/_15sdp"
                              android:fontFamily="@font/sf_pro_display_regular"
                              android:background="@android:color/transparent"
                              android:drawablePadding="@dimen/_10sdp"
                              android:singleLine="true"
                              android:textColor="@color/colorblack"
                              android:textColorHint="@color/colorblack"
-                             android:textSize="@dimen/_13sdp" />
+                             android:textSize="@dimen/_14sdp" />
 
 
                      </LinearLayout>
@@ -82,6 +85,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
                     android:layout_width="match_parent"
                     android:background="@color/colorWhite"
                     app:cardBackgroundColor="@color/colorWhite"
@@ -102,9 +107,8 @@
                         android:layout_height="wrap_content"
                         android:inputType="text"
                         android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_9sdp"
                         android:fontFamily="@font/sf_pro_display_regular"
-                        android:background="@android:color/transparent"
                         android:drawablePadding="@dimen/_10sdp"
                         android:singleLine="true"
                         android:textColor="@color/colorblack"
@@ -114,9 +118,84 @@
                 </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_sub_Category_Id"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_30sdp"
+                    android:layout_height="@dimen/_45sdp">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_selection_sub_category_Id"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_9sdp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorblack"
+                            android:textColorHint="@color/colorblack"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_sub_child_Category_Id"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_30sdp"
+                    android:layout_height="@dimen/_45sdp">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_selection_sub_child_category_Id"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_9sdp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorblack"
+                            android:textColorHint="@color/colorblack"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
                     android:layout_width="match_parent"
                     android:background="@color/colorWhite"
                     app:cardBackgroundColor="@color/colorWhite"
@@ -131,7 +210,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp">
 
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_weight="2"
+                            android:id="@+id/tv_add_location_Id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Add Location"
+                            android:inputType="textEmailAddress"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorblack"
+                            android:textColorHint="@color/colorblack"
+                            android:textSize="@dimen/_14sdp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_30sdp"
+                    android:layout_height="@dimen/_45sdp">
 
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:background="@drawable/rounded_box_signup"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_weight="2"
@@ -139,21 +252,24 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:hint="Add Price"
-                            android:inputType="textEmailAddress"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="@dimen/_10sdp"
+                            android:inputType="number"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_marginStart="@dimen/_15sdp"
                             android:fontFamily="@font/sf_pro_display_regular"
                             android:background="@android:color/transparent"
                             android:drawablePadding="@dimen/_10sdp"
                             android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/colorblack"
                             android:textColorHint="@color/colorblack"
-                            android:textSize="@dimen/_13sdp" />
+                            android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
                     android:layout_width="match_parent"
                     app:cardBackgroundColor="@color/colorWhite"
                     app:cardCornerRadius="@dimen/_20sdp"
@@ -189,40 +305,63 @@
 
                 </LinearLayout>
                 </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:layout_width="wrap_content"
-                    app:cardBackgroundColor="@color/colorWhite"
-                    app:cardCornerRadius="@dimen/_25sdp"
-                    android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:weightSum="2"
-                    android:id="@+id/add_image_id"
-                    android:background="@drawable/rounded_box_signup"
-                    android:orientation="vertical"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_weight=".12"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:layout_gravity="center"
-                        android:padding="@dimen/_5sdp"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_15sdp"
-                        android:background="@drawable/ic_icon_awesome_plus"/>
-
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_weight="1.85"
-                        android:id="@+id/tv_password"
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
                         android:layout_width="wrap_content"
-                        android:layout_height="0sp"
-                        android:hint="Add Image"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_25sdp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/add_image_id"
+                            android:background="@drawable/rounded_box_signup"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/add_image_post_id"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_icon_awesome_plus"
+                                />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Add Image"
+                                android:inputType="text"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:background="@android:color/transparent"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/colortext"
+                                android:textColorHint="@color/colortext"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_image_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:inputType="text"
+                        android:gravity="center"
                         android:layout_gravity="center"
                         android:fontFamily="@font/sf_pro_display_regular"
                         android:background="@android:color/transparent"
@@ -233,21 +372,22 @@
                         android:textSize="@dimen/_13sdp" />
 
                 </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_post"
+                    android:layout_marginRight="@dimen/_15sdp"
                     android:layout_width="@dimen/_180sdp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@drawable/button_shape"
                     android:text="Post"
                     android:layout_gravity="right"
                     android:fontFamily="@font/sf_pro_display_regular"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:textColor="@android:color/white"
                     android:textFontWeight="600"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_13sdp" />
 
 
             </LinearLayout>

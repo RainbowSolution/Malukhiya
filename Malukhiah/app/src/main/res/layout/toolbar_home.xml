@@ -58,7 +58,7 @@
                             android:layout_width="0dp"
                             android:padding="@dimen/_5sdp"
                             android:layout_weight=".12"
-                            android:layout_height="match_parent"></androidx.appcompat.widget.AppCompatImageView>
+                            android:layout_height="match_parent"/>
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -72,14 +72,14 @@
                                 android:src="@drawable/ic_map_white"
                                 android:layout_width="@dimen/_25sdp"
                                 android:padding="@dimen/_8sdp"
-                                android:layout_height="@dimen/_25sdp"></androidx.appcompat.widget.AppCompatImageView>
+                                android:layout_height="@dimen/_25sdp"/>
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/tv_tittle"
                                 android:layout_gravity="center"
                                 android:layout_width="wrap_content"
                                 android:textSize="@dimen/_12sdp"
-                                android:text="Your current location"
+                                android:text="@string/your_current_location"
                                 android:fontFamily="@font/sf_pro_display_medium"
                                 android:gravity="center"
                                 android:textColor="@color/colorWhite"
@@ -89,9 +89,9 @@
                                 android:layout_alignParentStart="true"
                                 android:src="@drawable/ic_arrow_down_white"
                                 android:layout_width="@dimen/_30sdp"
-                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
                                 android:padding="@dimen/_8sdp"
-                                android:layout_height="@dimen/_30sdp"></androidx.appcompat.widget.AppCompatImageView>
+                                android:layout_height="@dimen/_30sdp"/>
 
 
 
@@ -112,26 +112,26 @@
 
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_weight="1.85"
                         android:id="@+id/tv_email"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:hint="What's On your shopping list today?"
-                        android:inputType="textEmailAddress"
                         android:layout_gravity="center"
-                        android:textStyle="italic"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:layout_weight="1.85"
                         android:background="@android:color/transparent"
                         android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:hint="@string/what_s_on_your_shopping_list_today"
+                        android:inputType="textEmailAddress"
                         android:singleLine="true"
                         android:textColor="@color/colorPrimary"
                         android:textColorHint="@color/colortext"
-                        android:textSize="@dimen/_13sdp" />
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="italic" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/ivUserImageId"
-                        android:layout_weight=".10"
+                        android:layout_weight=".12"
                         android:layout_gravity="center"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_15sdp"
@@ -199,7 +199,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_product"
+                android:id="@+id/ll_chat"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -228,7 +228,7 @@
 
 
             <LinearLayout
-                android:id="@+id/ll_cart"
+                android:id="@+id/ll_add_post"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -257,7 +257,7 @@
 
 
             <LinearLayout
-                android:id="@+id/ll_acc"
+                android:id="@+id/ll_profile"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -293,14 +293,43 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="@dimen/_18sdp"
-                    android:layout_height="@dimen/_18sdp"
-                    android:src="@drawable/ic_notification_gray">
-                </ImageView>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivnotificaontHomeId"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10sp"
+                        android:padding="3sp"
+                        android:src="@drawable/ic_notification_gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlCartBackHomeId"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:background="@drawable/red_circle">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/ivNofificationcoutId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="serif"
+                            android:textColor="@color/colorWhite"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
 
                 <TextView
-                    android:layout_marginTop="@dimen/_3sdp"
                     android:textColor="@color/black_clr"
                     android:textSize="@dimen/_9sdp"
                     android:textAllCaps="true"

@@ -20,6 +20,7 @@ public class Constants {
     public static final String PROFILE_PIC = "profile_pic";
     public static final String EMAIL = "email";
     public static final String GENDER = "gender";
+    public static final String SOCIAL = "social";
     public static String STATUS = "preference_data";
     public static final String NOTIFICATION="notification";
     public static final String SETTING="settings";

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+           android:padding="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_shape_gray"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_change_language"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Change Language"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:singleLine="true"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_weight=".3"
+                        android:layout_centerInParent="true"
+                        android:checked="false"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp" />
+                </LinearLayout>
+
+                <View
+                    android:background="@color/colortext"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/ll_change_country"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Change Country"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:singleLine="true"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_weight=".3"
+                        android:layout_centerInParent="true"
+                        android:checked="false"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/ll_notification_setting"
+                android:weightSum="2"
+                android:background="@drawable/button_shape_gray"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_weight="1.7"
+                    android:layout_width="0dp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Notification Settings"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:singleLine="true"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_weight=".3"
+                    android:id="@+id/switchButton"
+                    android:layout_centerInParent="true"
+                    android:checked="false"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_20sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_blocked_user"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:weightSum="2"
+                android:background="@drawable/button_shape_gray"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_weight="1.7"
+                    android:layout_width="0dp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Blocked Users"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:singleLine="true"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_weight=".3"
+                    android:layout_centerInParent="true"
+                    android:checked="false"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_20sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/button_shape_gray"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_term_use"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Term Of Use"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:singleLine="true"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_weight=".3"
+                        android:layout_centerInParent="true"
+                        android:checked="false"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp" />
+                </LinearLayout>
+
+                <View
+                    android:background="@color/colortext"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/ll_privacy_policy"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Privacy Policy"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:singleLine="true"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_weight=".3"
+                        android:layout_centerInParent="true"
+                        android:checked="false"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/button_shape_gray"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_help"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Help"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:singleLine="true"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_weight=".3"
+                        android:layout_centerInParent="true"
+                        android:checked="false"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp" />
+                </LinearLayout>
+
+                <View
+                    android:background="@color/colortext"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/ll_contact_us"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Us"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:singleLine="true"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_weight=".3"
+                        android:layout_centerInParent="true"
+                        android:checked="false"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp" />
+                </LinearLayout>
+
+                <View
+                    android:background="@color/colortext"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/ll_about_app"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="About App"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:singleLine="true"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_weight=".3"
+                        android:layout_centerInParent="true"
+                        android:checked="false"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/ll_logout"
+                android:weightSum="2"
+                android:background="@drawable/button_shape_gray"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_weight="1.7"
+                    android:layout_width="0dp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:singleLine="true"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_weight=".3"
+                    android:layout_centerInParent="true"
+                    android:checked="false"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_20sdp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,56 +1,107 @@
 package com.alpha.malukhiah.authenticationModule;
 
-import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
 
-import com.alpha.malukhiah.MainActivity;
 import com.alpha.malukhiah.R;
+import com.alpha.malukhiah.apiPkg.RetrofitClient;
 import com.alpha.malukhiah.home_pkg.HomeActivity;
+import com.alpha.malukhiah.model.loginPkg.LoginPozo;
+import com.alpha.malukhiah.utility.AppSession;
 import com.alpha.malukhiah.utility.CheckNetwork;
+import com.alpha.malukhiah.utility.Constants;
+import com.alpha.malukhiah.utility.CustomProgressbar;
+import com.alpha.malukhiah.utility.CustomToast;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Login_Activity extends AppCompatActivity implements View.OnClickListener {
 
-  //  private MaterialButton mbtnSignInNow, mbtnRegisteredNow;
-    private AppCompatTextView tvForgetPassword ,tvRegisteredNow,tv_new_user;
-  //  private ApiServices apiServices;
-   // private TextInputEditText tiePasswordLogin, tieEmailAddressLogin;
+    private AppCompatTextView tvForgetPassword, tvRegisteredNow, tv_new_user;
+    private TextInputEditText tv_password, tv_email;
     private static Animation shakeAnimation;
     AppCompatButton btn_login;
+    AppCompatImageView ivBackForgetId;
     private String token;
-
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setContentView(R.layout.activity_login);
+        init();
+
+    }
+
+    private void init() {
+        tv_email = findViewById(R.id.tv_email);
+        tv_password = findViewById(R.id.tv_password);
         tvForgetPassword = findViewById(R.id.tvForgetPasswordId);
         tvRegisteredNow = findViewById(R.id.tvRegisteredNowId);
         tv_new_user = findViewById(R.id.tv_new_user);
         btn_login = findViewById(R.id.btn_login);
+        ivBackForgetId = findViewById(R.id.ivBackForgetId);
+        ivBackForgetId.setOnClickListener(this);
         tvForgetPassword.setOnClickListener(this);
         tvRegisteredNow.setOnClickListener(this);
         tv_new_user.setOnClickListener(this);
         btn_login.setOnClickListener(this);
+
+        shakeAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
+
+ /*       FirebaseApp.initializeApp(Login_Activity.this);
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (!task.isSuccessful()) {
+                            // Log.w(TAG, "getInstanceId failed", task.getException());
+                            return;
+                        }
+                        token = task.getResult().getToken();
+                        Log.d("token", token);
+                    }
+                });*/
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.ivBackForgetId:
+                finish();
+                break;
             case R.id.tvForgetPasswordId:
                 CheckNetwork.nextScreenWithoutFinish(Login_Activity.this, Forget_Activity.class);
                 break;
-           case R.id.btn_login:
-               startActivity(new Intent(Login_Activity.this, HomeActivity.class));
-               finish();
-               // validation(v);
+            case R.id.btn_login:
+                validation(v);
                 break;
             case R.id.tvRegisteredNowId:
                 CheckNetwork.nextScreenWithoutFinish(Login_Activity.this, SignUp_Activity.class);
@@ -61,81 +112,45 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-/*
-    private void init()
-    {
-        try {
-            tiePasswordLogin = findViewById(R.id.tiePasswordLoginId);
-            tieEmailAddressLogin = findViewById(R.id.tieEmailAddressLoginId);
-            tvForgetPassword = findViewById(R.id.tvForgetPasswordId);
-            mbtnSignInNow = findViewById(R.id.mbtnSignInNowId);
-            mbtnRegisteredNow = findViewById(R.id.mbtnRegisteredNowId);
-            mbtnSignInNow.setOnClickListener(this);
-            mbtnRegisteredNow.setOnClickListener(this);
-            tvForgetPassword.setOnClickListener(this);
-            shakeAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
-
-            FirebaseApp.initializeApp(Login_Activity.this);
-            FirebaseInstanceId.getInstance().getInstanceId()
-                    .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                            if (!task.isSuccessful()) {
-                                // Log.w(TAG, "getInstanceId failed", task.getException());
-                                return;
-                            }
-                            token = task.getResult().getToken();
-                            Log.d("token", token);
-                        }
-                    });
-
-        }catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
-
-
-
 
     private void validation(View v) {
-        if (tieEmailAddressLogin.getText().toString().isEmpty()) {
-            new CustomToast().Show_Toast(this, v, "Email Can't Empty");
-            tieEmailAddressLogin.startAnimation(shakeAnimation);
-            tieEmailAddressLogin.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            tieEmailAddressLogin.requestFocus();
-        } else if (!Constants.isValidEmail(tieEmailAddressLogin.getText().toString())) {
-            new CustomToast().Show_Toast(this, v, "Invalid Email");
-            tieEmailAddressLogin.startAnimation(shakeAnimation);
-            tieEmailAddressLogin.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            tieEmailAddressLogin.requestFocus();
-        } else if (tiePasswordLogin.getText().toString().isEmpty()) {
-            new CustomToast().Show_Toast(this, v, "Password Can't Empty");
-            tiePasswordLogin.startAnimation(shakeAnimation);
-            tiePasswordLogin.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            tiePasswordLogin.requestFocus();
-        } else if (tiePasswordLogin.getText().toString().length() < 6) {
-            new CustomToast().Show_Toast(this, v, "Password digits must be greater than six");
-            tiePasswordLogin.startAnimation(shakeAnimation);
-            tiePasswordLogin.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            tiePasswordLogin.requestFocus();
+        if (tv_email.getText().toString().isEmpty()) {
+            new CustomToast().Show_Toast(this, v, getResources().getString(R.string.email_cant_empty));
+            tv_email.startAnimation(shakeAnimation);
+            tv_email.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+            tv_email.requestFocus();
+        } else if (!Constants.isValidEmail(tv_email.getText().toString())) {
+            new CustomToast().Show_Toast(this, v, getResources().getString(R.string.invalid_email));
+            tv_email.startAnimation(shakeAnimation);
+            tv_email.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+            tv_email.requestFocus();
+        } else if (tv_password.getText().toString().isEmpty()) {
+            new CustomToast().Show_Toast(this, v, getResources().getString(R.string.password_cant_empty));
+            tv_password.startAnimation(shakeAnimation);
+            tv_password.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+            tv_password.requestFocus();
+        } else if (tv_password.getText().toString().length() <=5) {
+            new CustomToast().Show_Toast(this, v, getResources().getString(R.string.pass_digit_must_be_greater_than_six));
+            tv_password.startAnimation(shakeAnimation);
+            tv_password.getBackground().mutate().setColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+            tv_password.requestFocus();
         } else if (CheckNetwork.isNetAvailable(this)) {
-            login(tieEmailAddressLogin.getText().toString().trim(),
-                    tiePasswordLogin.getText().toString().trim());
+            login(tv_email.getText().toString().trim(),
+                    tv_password.getText().toString().trim());
         } else {
-            new CustomToast().Show_Toast(this, v, "Check Network Connection");
+            new CustomToast().Show_Toast(this, v, getResources().getString(R.string.chek_network_connection));
         }
     }
 
 
     private void login(String email, String pass) {
         CustomProgressbar.showProgressBar(this, false);
-        apiServices.login(email, pass, token).enqueue(new Callback<LoginResponseModle>() {
+        (RetrofitClient.getClient().login(email, pass, token)).enqueue(new Callback<LoginPozo>() {
             @Override
-            public void onResponse(Call<LoginResponseModle> call, Response<LoginResponseModle> response) {
+            public void onResponse(Call<LoginPozo> call, Response<LoginPozo> response) {
                 if (response.isSuccessful()) {
                     CustomProgressbar.hideProgressBar();
-                    LoginResponseModle loginResponseModle = response.body();
+                    LoginPozo loginResponseModle = response.body();
                     if (loginResponseModle.getStatus()) {
                         AppSession.setStringPreferences(Login_Activity.this, Constants.STATUS, "auth");
                         AppSession.setStringPreferences(Login_Activity.this, Constants.USER_ID, loginResponseModle.getData().getUserId());
@@ -144,7 +159,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                         AppSession.setStringPreferences(Login_Activity.this, Constants.EMAIL, loginResponseModle.getData().getUserEmail());
                         AppSession.setStringPreferences(Login_Activity.this, Constants.GENDER, loginResponseModle.getData().getGender());
                         AppSession.setStringPreferences(Login_Activity.this, Constants.PROFILE_PIC, loginResponseModle.getData().getUserImage());
-                        CheckNetwork.nextScreenWithFinish(Login_Activity.this, HomeActivity.class);
+                        CheckNetwork.nextScreenFinishAllTop(Login_Activity.this, HomeActivity.class);
                     } else {
                         Toast.makeText(Login_Activity.this, loginResponseModle.getMessage(), Toast.LENGTH_LONG).show();
                     }
@@ -165,11 +180,11 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
             }
 
             @Override
-            public void onFailure(Call<LoginResponseModle> call, Throwable t) {
+            public void onFailure(Call<LoginPozo> call, Throwable t) {
                 CustomProgressbar.hideProgressBar();
             }
         });
 
 
-    }*/
+    }
 }

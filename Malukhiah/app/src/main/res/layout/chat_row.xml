@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:layout_marginLeft="@dimen/_1sdp"
+    android:layout_marginRight="@dimen/_1sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:padding="@dimen/_10sdp"
+    android:id="@+id/llOrderClickId"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight=".20"
+                android:layout_width="0dp"
+                android:gravity="top"
+                android:layout_gravity="top"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_product"
+                    app:riv_corner_radius="@dimen/_10sdp"
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="clamp"
+                    android:scaleType="centerCrop"
+                    app:riv_oval="false"
+                    android:src="@drawable/dish_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".80"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:id="@+id/id_username"
+                        android:textSize="@dimen/_13sdp"
+                        android:text="Alina Finiti"
+                        android:layout_weight="0.90"
+                        android:textColor="@color/colorblack"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/iv_menu"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_weight="0.10"
+                        android:src="@drawable/ic_menu_verticle" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="So any plans this weekend ?"
+                    android:textColor="@color/black_clr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="03:45 PM"
+                        android:gravity="right"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_gravity="right"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+

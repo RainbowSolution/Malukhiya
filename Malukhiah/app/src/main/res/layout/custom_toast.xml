@@ -22,7 +22,6 @@
             android:padding="5dp"
             android:textColor="#fff"
             android:textSize="15sp" />
+
     </RelativeLayout>
-
-
 </RelativeLayout>

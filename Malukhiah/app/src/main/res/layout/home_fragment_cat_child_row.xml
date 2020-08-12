@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@+id/line_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_120sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:layout_margin="@dimen/_5sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:id="@+id/tv_productname"
+                android:gravity="center"
+                 android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Food"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:id="@+id/viewas"
+        android:layout_below="@+id/tv_productname"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="@dimen/_2sdp"/>
+
+
+
+
+</RelativeLayout>
+

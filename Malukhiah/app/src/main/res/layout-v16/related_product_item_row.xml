@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_130sdp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@color/colorWhite"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/id_userpic"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dish_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@color/colorWhite"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_50sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:id="@+id/iv_fav_fill"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_icon_fill_heart"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:id="@+id/iv_fav_not_fill"
+                    android:src="@drawable/ic_icon_not_fill_heart" />
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_minus10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:id="@+id/tv_productname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="Egg Friedrice"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_11sdp" />
+
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:id="@+id/tv_location"
+                    android:layout_weight="0.7"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="Indian,Chinese"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_8sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="right"
+                    android:id="@+id/tv_price"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:text="$150"
+                    android:textColor="@color/colorgreen"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+

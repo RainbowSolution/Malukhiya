@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@color/colorWhite"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/colorWhite"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:text="40 EXP"
+                android:id="@+id/tvExpId"
+                android:drawablePadding="@dimen/_2sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="@color/black_clr"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:drawableLeft="@drawable/ic_add_blue"
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:src="@drawable/membership_icon"
+                android:id="@+id/ivMemberShipSmallIconId"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/id_userpic"
+                android:layout_marginLeft="@dimen/_minus15sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/membership_icon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:id="@+id/tv_MemberShipTitleId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Silver"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Won second place on a verified forum completition"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/colorgreen"
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </View>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/buy_now"
+                android:textStyle="italic"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+

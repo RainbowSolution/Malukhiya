@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="@dimen/_5sdp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civDoctListId"
+            android:layout_weight=".10"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:civ_border_color="@color/colorgreen"
+            app:civ_border_width="@dimen/_1sdp"
+            android:src="@drawable/ic_user_gray" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.88"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black_clr"
+                android:gravity="center|left"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="Alina Finiti"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black_clr"
+                android:gravity="center|left"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textSize="@dimen/_11sdp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="23 Post"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.AppCompatTextView>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_weight="0.02"
+            android:layout_width="wrap_content"
+            android:text="@string/follow"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_shape"
+            android:layout_height="@dimen/_25sdp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+</LinearLayout>

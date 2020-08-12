@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+    app:cardBackgroundColor="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_marginLeft="@dimen/_1sdp"
+    android:layout_marginRight="@dimen/_1sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/llOrderClickId"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight=".30"
+                android:layout_width="0dp"
+                android:gravity="top"
+                android:layout_gravity="top"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_product"
+                    app:riv_corner_radius="@dimen/_10sdp"
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="clamp"
+                    android:scaleType="centerCrop"
+                    app:riv_oval="false"
+                    android:src="@drawable/dish_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_75sdp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".70"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:id="@+id/tv_productname"
+                        android:textSize="@dimen/_13sdp"
+                        android:text="Egg Friedrice"
+                        android:layout_weight="0.70"
+                        android:textColor="@color/colorblack"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:gravity="right"
+                        android:textSize="@dimen/_11sdp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textColor="@color/colorgreen"
+                        android:id="@+id/iv_add_address"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_weight="0.30"
+                        android:text="@string/completed" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textSize="@dimen/_11sdp"
+                    android:id="@+id/tv_categoryid"
+                    android:text="South Indian"
+                    android:textColor="@color/black_clr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textSize="@dimen/_9sdp"
+                    android:id="@+id/tv_description"
+                    android:text="Refrence site about Lorem Lpsum giving information origins,"
+                    android:textColor="@color/black_clr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 60"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="04-June-2020"
+                        android:gravity="right"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_gravity="right"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textColor="@color/black_clr"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+

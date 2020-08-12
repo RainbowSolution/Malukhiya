@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="@string/followers_02"
+                android:id="@+id/total_follower"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/_15sdp"
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/_14sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:id="@+id/id_rv_followers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="@string/suggestion_people"
+                android:layout_margin="@dimen/_15sdp"
+                android:visibility="gone"
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/_14sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:visibility="gone"
+                android:id="@+id/id_rv_suggestion_ppl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_data_not_id"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:layout_centerInParent="true"
+        android:text="Data Not Available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+

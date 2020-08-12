@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="12sp"
+    app:cardElevation="2sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivlogoutCloseId"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_25sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_cross" />
+
+        <LinearLayout
+            android:padding="@dimen/_15sdp"
+            android:layout_below="@+id/ivlogoutCloseId"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/_15sdp"
+            android:id="@+id/id_username"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/areyousureyouwantremovead"
+            android:textColor="@color/black_clr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/id_cancel"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorgreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+android:layout_marginLeft="@dimen/_20sdp"
+                    android:id="@+id/id_yes"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/yes"
+                    android:textColor="@color/colorgreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </androidx.appcompat.widget.AppCompatTextView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "274298732708",
+    "firebase_url": "https://malukhiah.firebaseio.com",
+    "project_id": "malukhiah",
+    "storage_bucket": "malukhiah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274298732708:android:1dacd6364305d68469e631",
+        "android_client_info": {
+          "package_name": "com.alpha.malukhiah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274298732708-p63m43ftk49uqi4eq494nopue2a6jgca.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alpha.malukhiah",
+            "certificate_hash": "2a571ca116d853765d3f22c9e4ec3e4bd361cb6d"
+          }
+        },
+        {
+          "client_id": "274298732708-8d9pmpa9j5ctrvk78rnhdolcto5anrnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXhizL08caETTBONUIbgdTr89NWoRRa6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274298732708-8d9pmpa9j5ctrvk78rnhdolcto5anrnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

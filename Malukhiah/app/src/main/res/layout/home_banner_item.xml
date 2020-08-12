@@ -12,9 +12,9 @@
         app:riv_corner_radius="@dimen/_10sdp"
         app:riv_mutate_background="true"
         app:riv_tile_mode="clamp"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         app:riv_oval="false"
-        android:src="@drawable/ic_background"
+        android:src="@drawable/dish_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>

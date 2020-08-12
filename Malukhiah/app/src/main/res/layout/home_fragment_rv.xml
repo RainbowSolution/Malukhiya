@@ -39,7 +39,7 @@
          android:layout_height="wrap_content"
          android:gravity="left"
          android:fontFamily="@font/sf_pro_display_regular"
-         android:text="Today's Highlight"
+         android:text="@string/today_s_highlight"
          android:textColor="@color/black_clr"
          android:textSize="@dimen/_14sdp"/>
 
@@ -100,7 +100,7 @@
          android:layout_height="wrap_content"
          android:gravity="left"
          android:fontFamily="@font/sf_pro_display_regular"
-         android:text="Explore From Categories"
+         android:text="@string/explore_from_categories"
          android:textColor="@color/black_clr"
          android:textSize="@dimen/_14sdp"/>
 

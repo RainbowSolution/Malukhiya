@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingBottom="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:text="@string/lorum_text"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/_15sdp"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:fontFamily="@font/playlist_script"
+                    android:text="@string/contact_form"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_20sdp">
+                </androidx.appcompat.widget.AppCompatTextView>
+
+            <LinearLayout
+                android:paddingBottom="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                 <androidx.cardview.widget.CardView
+                     android:layout_marginTop="@dimen/_15sdp"
+                     android:layout_marginLeft="@dimen/_15sdp"
+                     android:layout_marginRight="@dimen/_15sdp"
+                     android:layout_width="match_parent"
+                     android:background="@color/colorWhite"
+                     app:cardBackgroundColor="@color/colorWhite"
+                     app:cardCornerRadius="@dimen/_30sdp"
+                     android:layout_height="@dimen/_45sdp">
+                     <LinearLayout
+                         android:weightSum="2"
+                         android:orientation="horizontal"
+                         android:padding="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp">
+
+                         <com.google.android.material.textfield.TextInputEditText
+                             android:layout_weight="2"
+                             android:id="@+id/tv_nameContact_id"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:hint="@string/name"
+                             android:inputType="text"
+                             android:layout_gravity="center"
+                             android:layout_marginStart="@dimen/_10sdp"
+                             android:fontFamily="@font/sf_pro_display_regular"
+                             android:background="@android:color/transparent"
+                             android:drawablePadding="@dimen/_10sdp"
+                             android:singleLine="true"
+                             android:textColor="@color/colorblack"
+                             android:textColorHint="@color/colorblack"
+                             android:textSize="@dimen/_13sdp" />
+
+
+
+                     </LinearLayout>
+                 </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_30sdp"
+                    android:layout_height="@dimen/_45sdp">
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:id="@+id/tvEmailContactId"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email_address"
+                            android:inputType="text"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorblack"
+                            android:textColorHint="@color/colorblack"
+                            android:textSize="@dimen/_13sdp" />
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_30sdp"
+                    android:layout_height="@dimen/_45sdp">
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_weight="2"
+                            android:id="@+id/tvMessageContactId"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/message"
+                            android:inputType="text"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorblack"
+                            android:textColorHint="@color/colorblack"
+                            android:textSize="@dimen/_13sdp" />
+
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_post"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:background="@drawable/button_shape"
+                    android:text="@string/send"
+                    android:layout_gravity="right"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_13sdp" />
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
